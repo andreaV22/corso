@@ -1,0 +1,86 @@
+:root {
+    --sans-serif-font: 'Roboto', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    --white-color:#fff;
+    --black-color:#333;
+    --primary-color:#116dbe;
+    --secondary-color:#8c0b61;
+    --success-color:#1fd355;
+    --warning-color:#e67111;
+    --alert-color:#e10c0c;
+}
+
+/* metodo per affiancare con float */
+
+body {
+    font-family:var(--sans-serif-font);
+
+}
+
+a{
+    text-transform: capitalize;
+    text-decoration: none;  
+}
+
+.site-header-float{
+    overflow: auto;
+}
+
+.site-header-float::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.site-header-float .site-logo-wrapper,
+.site-header-float .site-nav{
+    float: left;
+}
+/*END metodo per affiancare con float */
+
+/* Metodo per affiancare con metodo FLEX */
+
+.site-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 16px;
+
+
+    li {
+        margin: 16px;
+    }
+}
+
+.site-logo-wrapper {
+    display: block;
+
+    img{
+        max-width: 92px;
+    }
+}
+
+.list-reset li{
+    display: inline-block;
+}
+
+.hamburgher-btn {
+    height: 32px;
+    width: 32px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.hamburgher-btn::before,
+.hamburgher-btn::after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color:var(--black-color);
+    display: block;
+    margin: 4px 0;
+}
+
+/* END Metodo per affiancare con metodo FLEX */
+
+/* utility classes */
